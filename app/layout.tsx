@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
+import Particlesbackground from '@/components/Particlesbackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,8 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
+      <Particlesbackground></Particlesbackground>
+        <Header></Header>
         {children}
+        <Footer></Footer>
         </body>
     </html>
   )

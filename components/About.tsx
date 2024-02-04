@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import image from "@/public/1.png"
 
 type Props = {};
 
@@ -12,11 +13,17 @@ export default function About({}: Props) {
         opacity: 1,
       }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col text-center p-10 justify-center items-center h-[100vh] z-10"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <div>
+      <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
+      <h3 className="uppercase tracking-[3px] text-gray-500 text-sm">
+        Know me
+      </h3>
+      </div>
+      <div className="flex flex-row justify-between items-center mt-20">
       <motion.img
         initial={{
           x: -200,
@@ -29,12 +36,12 @@ export default function About({}: Props) {
         transition={{
           duration: 1.2,
         }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         src="https://i.pinimg.com/736x/22/9a/05/229a05f9751700bd4445a6f90477dc03.jpg"
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
         alt=""
       />
-      <div className="space-y-10 px-0 md:px-10">
+      <div className="space-y-10 px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]">little</span>{" "}
@@ -56,6 +63,7 @@ export default function About({}: Props) {
           optio vel? Dolore, modi molestiae optio sunt exercitationem eum!
           Officiis omnis magnam ducimus eos quam ex ab?
         </p>
+      </div>
       </div>
     </motion.div>
   );
